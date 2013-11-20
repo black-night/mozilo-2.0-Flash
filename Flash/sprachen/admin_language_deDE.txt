@@ -1,0 +1,2 @@
+config_plugin_name              = Flash
+config_plugin_desc              = Bindet Flash (*.swf) Dateien in die Seite ein.<br /><br /><span style="font-weight:bold;">Nutzung:</span><br />{Flash|500,300,@=Willkommen:banner001.swf=@} Der erste Wert ist die Breite und der zweite die Höhe. Die swf Datei muss dabei als Datei hochgeladen sein.<br />
