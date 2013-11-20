@@ -29,7 +29,7 @@ class Flash extends Plugin {
 		
 		list($cat,$datei) = $CatPage->split_CatPage_fromSyntax($values[2],true);
 		
-		$file = CONTENT_DIR_NAME."/".$cat."/".CONTENT_FILES_DIR_NAME."/".$datei;
+		$file = URL_BASE.CONTENT_DIR_NAME."/".$cat."/".CONTENT_FILES_DIR_NAME."/".$datei;
 		
 		$result  = '<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="'.$values[0].'" height="'.$values[1].'" align="middle">';
         $result .= '  <param name="movie" value="'.$file.'"/>';
