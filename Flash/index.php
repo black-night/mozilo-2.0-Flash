@@ -29,7 +29,7 @@ class Flash extends Plugin {
 		
 		list($cat,$datei) = $CatPage->split_CatPage_fromSyntax($values[2],true);
 		
-		$file = URL_BASE.CONTENT_DIR_NAME."/".$cat."/".CONTENT_FILES_DIR_NAME."/".$datei;
+		$file = $CatPage->get_srcFile($cat,$datei,false);
 		
 		$result  = '<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="'.$values[0].'" height="'.$values[1].'" align="middle">';
         $result .= '  <param name="movie" value="'.$file.'"/>';
@@ -76,7 +76,7 @@ class Flash extends Plugin {
         $this->lang_admin = new Language($dir."sprachen/admin_language_".$language.".txt");        
         $info = array(
             // Plugin-Name
-            "<b>".$this->lang_admin->getLanguageValue("config_plugin_name")."</b> \$Revision: 1 $",
+            "<b>".$this->lang_admin->getLanguageValue("config_plugin_name")."</b> \$Revision: 2 $",
             // CMS-Version
             "2.0",
             // Kurzbeschreibung
